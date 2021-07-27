@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "allowJs": false,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules", "__tests__", "src/types", "test", "build"],
+  "include": ["packages/*/src/**/*.ts"]
+}
