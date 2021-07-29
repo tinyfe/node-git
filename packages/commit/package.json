@@ -1,0 +1,49 @@
+{
+  "name": "@tinyfe/git-commit",
+  "version": "0.0.1",
+  "description": "git commit",
+  "keywords": [
+    "git commit",
+    "git",
+    "commit"
+  ],
+  "author": "Rain120 <1085131904@qq.com>",
+  "homepage": "https://github.com/tinyfe/node-git#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "jest --watch",
+    "watch": "tsc -w",
+    "build": "rm -rf lib && tsc"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.25",
+    "fs-extra": "^10.0.0",
+    "jest": "^26.6.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinyfe/node-git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tinyfe/node-git/issues"
+  },
+  "dependencies": {}
+}
