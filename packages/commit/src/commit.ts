@@ -1,30 +1,41 @@
-import { execSync } from 'child_process';
+import { execSync, ExecSyncOptionsWithBufferEncoding } from 'child_process';
 import path from 'path';
 import fs from 'fs-extra';
 
-export function commit(commitPath: string) {
+interface CommitOptions {
+  shouldRemoveGit?: boolean;
+  commitExecOptions?: ExecSyncOptionsWithBufferEncoding;
+}
+
+export function commit(
+  commitPath: string,
+  messages: string | string[],
+  options: CommitOptions,
+) {
   try {
     execSync('git add -A', { stdio: 'ignore' });
-    execSync('git commit -m "Initialize project using Create React App"', {
+
+    messages = Array.isArray(messages) ? messages.join(' ') : messages;
+
+    execSync(`git commit -m "${messages}"`, {
       stdio: 'ignore',
+      ...options.commitExecOptions,
     });
 
     return true;
   } catch (e) {
-    // We couldn't commit in already initialized git repo,
-    // maybe the commit author config is not set.
-    // In the future, we might supply our own committer
-    // like Ember CLI does, but for now, let's just
-    // remove the Git files to avoid a half-done state.
-    console.warn('Git commit not created', e);
-    console.warn('Removing .git directory...');
+    if (options.shouldRemoveGit) {
+      console.warn('Git commit not created', e);
+      console.warn('Removing .git directory...');
 
-    try {
-      // unlinkSync() doesn't work on directories.
-      fs.removeSync(path.join(commitPath, '.git'));
-    } catch (removeErr) {
-      // Ignore.
+      try {
+        // unlinkSync() doesn't work on directories.
+        fs.removeSync(path.join(commitPath, '.git'));
+      } catch (removeErr) {
+        // Ignore.
+      }
     }
+
     return false;
   }
 }
