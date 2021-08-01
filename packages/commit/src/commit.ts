@@ -10,7 +10,7 @@ interface CommitOptions {
 export function commit(
   commitPath: string,
   messages: string | string[],
-  options: CommitOptions,
+  options?: CommitOptions,
 ) {
   try {
     execSync('git add -A', { stdio: 'ignore' });
@@ -19,12 +19,12 @@ export function commit(
 
     execSync(`git commit -m "${messages}"`, {
       stdio: 'ignore',
-      ...options.commitExecOptions,
+      ...options?.commitExecOptions,
     });
 
     return true;
   } catch (e) {
-    if (options.shouldRemoveGit) {
+    if (options?.shouldRemoveGit) {
       console.warn('Git commit not created', e);
       console.warn('Removing .git directory...');
 
