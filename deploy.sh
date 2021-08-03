@@ -10,6 +10,6 @@ git init
 git add -A
 git commit -m 'deploy site gh-pages'
 
-git push -f git@github.com:Rain120/lerna-quick-start.git main:gh-pages
+git push -f git@github.com:tinyfe/node-git.git main:gh-pages
 
 cd -

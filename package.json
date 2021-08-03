@@ -6,7 +6,7 @@
   "private": true,
   "author": "Rain120 <1085131904@qq.com>",
   "repository": {
-    "git": "https://github.com/Rain120/lerna-quick-start.git"
+    "git": "https://github.com/tinyfe/node-git.git"
   },
   "maintainers": [
     {
@@ -33,13 +33,7 @@
     "lint-staged": "lint-staged",
     "deploy": "bash deploy.sh",
     "test": "jest",
-    "test-cov": "jest --coverage",
-    "build:js": "node ./scripts/build.js",
-    "watch:module": "cross-env NODE_ENV=MODULE rollup -cw",
-    "watch:umd": "cross-env NODE_ENV=BUILD rollup -cw",
-    "build:module": "cross-env NODE_ENV=MODULE rollup -c",
-    "build:umd": "cross-env NODE_ENV=UMD rollup -c",
-    "build:all": "cross-env NODE_ENV=ALL rollup -c"
+    "test-cov": "jest --coverage"
   },
   "lint-staged": {
     "packages/**/**.{ts}": [
@@ -62,10 +56,6 @@
     "@babel/preset-typescript": "^7.12.13",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@rollup/plugin-babel": "^5.2.2",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.1.1",
-    "@rollup/plugin-replace": "^2.4.2",
     "@types/jest": "^26.0.16",
     "@types/node": "^14.14.10",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
@@ -88,11 +78,6 @@
     "prettier": "^2.2.1",
     "prompts": "^2.4.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.34.1",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
     "shelljs": "^0.8.4",
     "ts-jest": "^26.4.4",
     "tslib": "^2.0.3",

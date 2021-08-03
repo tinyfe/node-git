@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "commonjs",
     "allowJs": false,
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -11,8 +11,8 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
+    // "declarationMap": true,
+    // "sourceMap": true,
     "typeRoots": ["node_modules/@types"]
   },
   "exclude": ["node_modules", "__tests__", "src/types", "test", "build"],
