@@ -44,6 +44,6 @@
     "url": "https://github.com/tinyfe/node-git/issues"
   },
   "dependencies": {
-    "@tinyfe/git-repo": "^0.0.1"
+    "@tinyfe/git-repo": "^0.0.0"
   }
 }
