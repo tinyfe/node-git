@@ -1,7 +1,7 @@
 {
-  "name": "lerna-quick-start",
+  "name": "@tinyfe/node-git",
   "version": "1.0.0",
-  "description": "(WIP) lerna quick start",
+  "description": "git commanders for node",
   "license": "MIT",
   "private": true,
   "author": "Rain120 <1085131904@qq.com>",
