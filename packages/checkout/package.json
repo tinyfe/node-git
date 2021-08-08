@@ -1,6 +1,6 @@
 {
   "name": "@tinyfe/git-checkout",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "git checkout",
   "keywords": [
     "git checkout",
@@ -44,6 +44,5 @@
   },
   "bugs": {
     "url": "https://github.com/tinyfe/node-git/issues"
-  },
-  "dependencies": {}
+  }
 }

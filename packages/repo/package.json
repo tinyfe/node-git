@@ -1,6 +1,6 @@
 {
   "name": "@tinyfe/git-repo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "git repo",
   "keywords": [
     "git repo",
@@ -42,6 +42,5 @@
   },
   "bugs": {
     "url": "https://github.com/tinyfe/node-git/issues"
-  },
-  "dependencies": {}
+  }
 }
