@@ -45,5 +45,6 @@
   },
   "dependencies": {
     "@tinyfe/git-repo": "^0.0.1"
-  }
+  },
+  "gitHead": "1354ae53d2027e9f91c425f6fa7aefe09793ef74"
 }
