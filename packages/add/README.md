@@ -1,11 +1,11 @@
 # `@tinyfe/git-add`
 
-> git add
+> git commander about add
 
 ## Usage
 
-```
-const add = require('@tinyfe/git-add');
+```js
+import add from '@tinyfe/git-add';
 
-// TODO: DEMONSTRATE API
+add('./');
 ```

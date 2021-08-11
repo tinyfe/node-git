@@ -1,11 +1,11 @@
-# `@tinyfe/git-add`
+# `@tinyfe/git-commit`
 
-> git add
+> commander about git commit
 
 ## Usage
 
-```
-const add = require('@tinyfe/git-add');
+```js
+import { commit } from '@tinyfe/git-commit';
 
-// TODO: DEMONSTRATE API
+commit('../', 'feat: Created git commit.');
 ```

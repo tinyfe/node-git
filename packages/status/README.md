@@ -1,11 +1,11 @@
 # `@tinyfe/git-status`
 
-> git status
+> commander about git status
 
 ## Usage
 
-```
-const status = require('@tinyfe/git-status');
+```js
+import { status } from '@tinyfe/git-status';
 
-// TODO: DEMONSTRATE API
+status(); // same as git status
 ```

@@ -1,11 +1,16 @@
-# `@tinyfe/git-add`
+# `@tinyfe/git-repo`
 
-> git add
+> commander about git repo
 
 ## Usage
 
-```
-const add = require('@tinyfe/git-add');
+```js
+import { isInGitRepository, isInMercurialRepository } from '@tinyfe/git-repo';
 
-// TODO: DEMONSTRATE API
+// 是否是 Git 类型的
+isInGitRepository(); // true or false
+
+// 轻量级分布式版本控制系统
+// https://www.mercurial-scm.org/wiki/ChineseQuickStart
+isInMercurialRepository(); // true or false
 ```

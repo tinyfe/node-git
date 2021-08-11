@@ -1,11 +1,20 @@
-# `template`
+# `@tinyfe/git-checkout`
 
-> TODO: description
+> commander about git checkout
 
 ## Usage
 
 ```js
-import template from 'template';
+import { checkout, checkoutPromisify } from '@tinyfe/git-checkout';
 
-// TODO: DEMONSTRATE API
+checkout('main', { targetPath: '.' }, () => {
+  console.log('checkout finished)
+});
+
+// promise that checkout
+const checkoutIt = async () => {
+  await checkoutPromisify('main', { targetPath: '.' });
+};
+
+checkoutIt();
 ```

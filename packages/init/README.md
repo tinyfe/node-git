@@ -1,11 +1,13 @@
-# `@tinyfe/git-add`
+# `@tinyfe/git-init`
 
-> git add
+> commander about git init
 
 ## Usage
 
-```
-const add = require('@tinyfe/git-add');
+```js
+import { init, clonePromisify} from '@tinyfe/git-init';
 
-// TODO: DEMONSTRATE API
+init('main', { targetPath: '.' }, () => {
+  console.log('init finished)
+});
 ```
