@@ -1,13 +1,13 @@
-import { ChildProcess, spawn } from 'child_process';
+import { spawn } from 'child_process';
 import { promisify } from 'util';
 import { processAsync } from './processAsync';
-import { fn } from './typings';
+import { AnyObject, fn } from './typings';
 import { checkout } from '@tinyfe/git-checkout';
 
-export function clone(repo: string, targetPath: string, options?: any, cb?: fn) {
+export function clone(repo: string, targetPath: string, options?: AnyObject, cb?: fn) {
   if (typeof options === 'function') {
-    options = null;
-    cb = options as unknown as fn;
+    cb = options;
+    options = {};
   }
 
   options = options || {
@@ -26,13 +26,15 @@ export function clone(repo: string, targetPath: string, options?: any, cb?: fn) 
   args.push(repo);
   args.push(targetPath);
 
+  // @ts-expect-error
   const process = spawn(git, args, options);
 
-  processAsync(process as ChildProcess, 'git-clone', (err, stdout, stderr) => {
+  processAsync(process, 'git-clone', (err, stdout, stderr) => {
     if (err) {
       cb && cb(err);
     } else {
       if (typeof options !== 'function' && options?.checkout) {
+        // @ts-expect-error
         checkout(options.checkout, { targetPath, git }, cb);
       }
 
