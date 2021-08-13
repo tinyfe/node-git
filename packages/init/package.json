@@ -1,6 +1,6 @@
 {
   "name": "@tinyfe/git-init",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "git init",
   "keywords": [
     "git init",
@@ -44,7 +44,7 @@
     "url": "https://github.com/tinyfe/node-git/issues"
   },
   "dependencies": {
-    "@tinyfe/git-repo": "^0.0.1"
+    "@tinyfe/git-repo": "^0.0.2"
   },
   "gitHead": "1354ae53d2027e9f91c425f6fa7aefe09793ef74"
 }
